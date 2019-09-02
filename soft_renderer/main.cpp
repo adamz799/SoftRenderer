@@ -242,53 +242,6 @@ int WINAPI WinMain(HINSTANCE hinstance, HINSTANCE hprevinstance, LPSTR lpcmdline
 	shader.test_mode = TEST_LIGHT;
 	shader.use(data, indices);
 	device.draw(buffer);
-	//writeToPPM(buffer);
-
-	//float cubeData[] = {
-	//	//// Back face
-	//	-0.5f, -0.5f, 0.5f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, // Bottom-left
-	//	0.5f, 0.5f, 0.5f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f, // top-right
-	//	0.5f, -0.5f, 0.5f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f, // bottom-right         
-	//	0.5f, 0.5f, 0.5f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f,  // top-right
-	//	-0.5f, -0.5f, 0.5f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f,  // bottom-left
-	//	-0.5f, 0.5f, 0.5f, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f,// top-left
-	//	// pos					//normal			//color				//uv
-	//	-0.5f, -0.5f, -0.5f,   0.0f, 0.0f, -1.0f,		0.0f, 0.0f, // bottom-left
-	//	0.5f, -0.5f, -0.5f,   0.0f, 0.0f, -1.0f,		1.0f, 0.0f,  // bottom-right
-	//	0.5f, 0.5f, -0.5f,   0.0f, 0.0f, -1.0f,			1.0f, 1.0f,  // top-right
-	//	0.5f, 0.5f, -0.5f,   0.0f, 0.0f, -1.0f,			1.0f, 1.0f, // top-right
-	//	-0.5f, 0.5f, -0.5f,   0.0f, 0.0f, -1.0f,		0.0f, 1.0f,  // top-left
-	//	-0.5f, -0.5f, -0.5f,   0.0f, 0.0f, -1.0f,		0.0f, 0.0f,  // bottom-left
-	//	 //Left face
-	//	-0.5f, 0.5f, -0.5f,   -1.0f, 0.0f, 0.0f,   1.0f, 0.0f, // top-right
-	//	-0.5f, 0.5f, 0.5f,   -1.0f, 0.0f, 0.0f,   1.0f, 1.0f, // top-left
-	//	-0.5f, -0.5f, 0.5f,   -1.0f, 0.0f, 0.0f,   0.0f, 1.0f,  // bottom-left
-	//	-0.5f, -0.5f, 0.5f,   -1.0f, 0.0f, 0.0f,   0.0f, 1.0f, // bottom-left
-	//	-0.5f, -0.5f, -0.5f,   -1.0f, 0.0f, 0.0f,   0.0f, 0.0f,  // bottom-right
-	//	-0.5f, 0.5f, -0.5f,   -1.0f, 0.0f, 0.0f,   1.0f, 0.0f, // top-right
-	//	//bottom
-	//	-0.5f, -0.5f, -0.5f,   0.0f, -1.0f, 0.0f,   0.0f, 1.0f, // bottom-left
-	//	0.5f, -0.5f, -0.5f,   0.0f,-1.0f, 0.0f,   1.0f, 1.0f,  // bottom-right
-	//	0.5f, -0.5f, 0.5f,   0.0f, -1.0f, 0.0f,   1.0f, 0.0f,  // top-right
-	//	-0.5f, -0.5f, -0.5f,   0.0f, -1.0f, 0.0f,   0.0f, 1.0f, // bottom-left
-	//	-0.5f, -0.5f, 0.5f,   0.0f,-1.0f, 0.0f,   0.0f, 0.0f,  // bottom-right
-	//	0.5f, -0.5f, 0.5f,   0.0f, -1.0f, 0.0f,   1.0f, 0.0f,  // top-right
-
-	//};
-	//
-	//dataLength = 8;
-	//pointAmount = sizeof(cubeData) / (dataLength * sizeof(float));
-
-	//data = VertexData(cubeData, pointAmount, dataLength, 0, 3);
-	//data.setColor(vertices, pointAmount, dataLength, 3, 3);
-	//data.setNormal(cubeData, pointAmount, dataLength, 3, 3);
-	//data.setTexCoords(cubeData, pointAmount, dataLength, 6, 2);
-
-	//indices = std::vector<int>(pointAmount);
-	//for (int i = 0; i < pointAmount; ++i) {
-	//	indices[i] = i;
-	//}
-	//data.setTBN(indices);
 
 	model = identityMatrix4x4();
 	matTranslate(model, vec3(0, -7.8, -100));
@@ -300,7 +253,6 @@ int WINAPI WinMain(HINSTANCE hinstance, HINSTANCE hprevinstance, LPSTR lpcmdline
 
 	Model nanosuit("nanosuit/nanosuit.obj");
 	nanosuit.draw(shader);
-	//shader.use(data, indices);
 
 	shader.test_mode = TEST_COLOR;
 	model = identityMatrix4x4();
