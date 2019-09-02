@@ -20,7 +20,7 @@ public:
 	float half_width ;
 
 	Camera(){}
-	Camera(vec3 &ori, vec3 &look_at_, vec3 &vup,  float v_fov, float aspect_){//aspect = width/height;
+	Camera(vec3 &ori, vec3 &look_at_, vec3 &vup,  float v_fov, float aspect_){
 		origin = ori;
 		look_at = look_at_;
 		up = vup;

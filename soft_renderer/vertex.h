@@ -32,12 +32,10 @@ public:
 	VertexData(const float *vertexs, int dataAmount, int dataLength, int offset , int pointLength) {
 		attributeCount = 0;
 		setData(positions, vertexs, dataAmount, dataLength, offset, pointLength, 4);
-		addAvailbleAttribute(positions, "positions");
 	}
 
 	void setNormal(const float *vertexs, int dataAmount, int dataLength, int offset, int pointLength) {
 		setData(normals, vertexs, dataAmount, dataLength, offset, pointLength, 4);
-		addAvailbleAttribute(normals, "normals");
 	}
 
 	void setTexCoords(const float *vertexs, int dataAmount, int dataLength, int offset, int pointLength) {
@@ -45,7 +43,6 @@ public:
 	}
 	void setColor(const float *vertexs, int dataAmount, int dataLength, int offset, int pointLength) {
 		setData(colors, vertexs, dataAmount, dataLength, offset, pointLength, 3);
-		addAvailbleAttribute(colors, "colors");
 	}
 
 	void setTBN(const std::vector<int> &indices) {
@@ -73,31 +70,10 @@ public:
 				}
 			}
 		}
-		addAvailbleAttribute(tangents, "tangents");
-		addAvailbleAttribute(bitTangents, "bitTangents");
 		return;
 	}
 
-	int addAvailbleAttribute(std::vector<vec4> &attri,  const char* name) {
-		attributeName[attributeCount] = std::string(name);
-		attribute[attributeCount++] = &attri;
-		return attributeCount;
-	}
-
 private:
-
-	/*void defaultConstruct() {
-		positions= std::vector<vec4>(1);
-		normals = std::vector<vec4>(1);
-		colors = std::vector<vec4>(1);
-		fragPosInWorlds = std::vector<vec4>(1);
-		tangents = std::vector<vec4>(1);
-		bitTangents = std::vector<vec4>(1);
-		tangentLightPos = std::vector<vec4>(1);
-		tangentViewPos = std::vector<vec4>(1);
-		texCoords = std::vector<vec2>(1);
-	}*/
-
 
 	template <typename T>
 	void setData(std::vector<T> &dataContainer, const float *vertexs, int dataAmount, int dataLength, int offset, int pointLength, int selfDataLength) {

@@ -124,12 +124,6 @@ public:
 	vec2 texCoords;
 	coord screenPos;
 
-	/*vec4 *attribute
-
-	static vec4* attribute[100];
-	static std::string attributeName[100];
-	static int attributeCount;*/
-
 	Frag() {}
 
 #ifdef SIMD
@@ -213,8 +207,6 @@ public:
 
 	//Shader() {}
 	Shader() {
-		/*vertexData = v;
-		indices = i;*/
 		model = identityMatrix4x4();
 	}
 
@@ -274,16 +266,9 @@ public:
 				vertexData.tangentViewPos[i] = TBN.mul_vec(vec4(camera.origin, 0.f));
 				vertexData.fragPosInWorlds[i] = TBN.mul_vec(vertexData.fragPosInWorlds[i]);
 			}
-			vertexData.addAvailbleAttribute(vertexData.tangentLightPos, "tangentLightPos");
-			vertexData.addAvailbleAttribute(vertexData.tangentViewPos, "tangentViewPos");
-		}
-		
-		
+		}		
 		applyTrans(view, vertexData.positions);
-
 		applyTrans(projection, vertexData.positions);
-
-
 	}
 
 	void backFaceClip() {
@@ -328,7 +313,6 @@ public:
 		int size = data.positions.size();
 		for (int i = 0; i < size; i++) {
 			float w_inv = 1.f / data.positions[i][3];
-			//float w = data.vertexArray[i][3];
 			
 			for (int j = 0; j < 2; ++j) {
 				data.positions[i][j] *= w_inv;

@@ -71,7 +71,6 @@ public:
 					int a = 0;
 				}
 				*(arr + offset_y1 + x) = RGB(int(c->B), int(c->G), int(c->R));
-				//SetPixel(hdc, x, buffer.height-y, RGB(int(c->R), int(c->G), int(c->B)));
 			}
 
 		}

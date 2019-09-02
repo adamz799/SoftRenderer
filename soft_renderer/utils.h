@@ -28,10 +28,6 @@ Matrix4x4 calProjectionMatrix(Camera &c, float z_near, float z_far) {
 	proj.e[1][1] = 1. / c.half_height;
 	proj.e[2][2] = 1. / (z_far - z_near);
 	proj.e[2][3] = -z_near / (z_far - z_near);
-	////nonlinear depth, z=1./z
-	//float t =  (1. / z_far - 1. / z_near);
-	//proj.e[2][2] = 1. / t;
-	//proj.e[2][3] = (-1. / z_near) / t;
 	proj.e[3][2] = 1;
 
 	return std::move(proj);
