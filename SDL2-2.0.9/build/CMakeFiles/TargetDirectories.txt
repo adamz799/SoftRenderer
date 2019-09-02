@@ -1,7 +1,0 @@
-F:/t/sync_file/文件/soft_renderer/SDL2-2.0.9/build/CMakeFiles/SDL2-static.dir
-F:/t/sync_file/文件/soft_renderer/SDL2-2.0.9/build/CMakeFiles/SDL2main.dir
-F:/t/sync_file/文件/soft_renderer/SDL2-2.0.9/build/CMakeFiles/INSTALL.dir
-F:/t/sync_file/文件/soft_renderer/SDL2-2.0.9/build/CMakeFiles/SDL2.dir
-F:/t/sync_file/文件/soft_renderer/SDL2-2.0.9/build/CMakeFiles/uninstall.dir
-F:/t/sync_file/文件/soft_renderer/SDL2-2.0.9/build/CMakeFiles/ALL_BUILD.dir
-F:/t/sync_file/文件/soft_renderer/SDL2-2.0.9/build/CMakeFiles/ZERO_CHECK.dir
