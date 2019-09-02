@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{430D3AC6-BD40-3954-B387-869A0357E7FE}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>SDL2-static</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">SDL2-static.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">SDL2-staticd</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">SDL2-static.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">SDL2-static</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">SDL2-static.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">SDL2-static</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">SDL2-static.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">SDL2-static</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\build\include;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\include;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\khronos;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;USING_GENERATED_CONFIG_H;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;USING_GENERATED_CONFIG_H;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\build\include;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\include;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\khronos;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\build\include;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\include;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\khronos;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\build\include;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\include;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\khronos;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <CompileAs>CompileAsC</CompileAs>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;USING_GENERATED_CONFIG_H;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;USING_GENERATED_CONFIG_H;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\build\include;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\include;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\khronos;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\build\include;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\include;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\khronos;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\build\include;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\include;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\khronos;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <CompileAs>CompileAsC</CompileAs>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;USING_GENERATED_CONFIG_H;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;USING_GENERATED_CONFIG_H;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\build\include;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\include;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\khronos;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\build\include;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\include;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\khronos;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\build\include;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\include;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\khronos;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;USING_GENERATED_CONFIG_H;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;USING_GENERATED_CONFIG_H;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\build\include;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\include;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\khronos;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\build\include;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\include;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\khronos;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule F:/t/sync_file/文件/soft_renderer/SDL2-2.0.9/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HF:/t/sync_file/文件/soft_renderer/SDL2-2.0.9 -BF:/t/sync_file/文件/soft_renderer/SDL2-2.0.9/build --check-stamp-file F:/t/sync_file/文件/soft_renderer/SDL2-2.0.9/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">F:/t/sync_file/文件/soft_renderer/SDL2-2.0.9/CMakeLists.txt;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\CMakeLists.txt;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\build\CMakeFiles\3.11.3\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeSystemSpecificInitialize.cmake;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\build\CMakeFiles\3.11.3\CMakeCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\Platform\Windows-MSVC.cmake;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\build\CMakeFiles\3.11.3\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckIncludeFiles.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckCSourceRuns.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckStructHasMember.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\FindPkgConfig.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\GNUInstallDirs.cmake;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\cmake\macros.cmake;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\cmake\sdlchecks.cmake;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\include\SDL_config.h.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\BasicConfigVersion-AnyNewerVersion.cmake.in;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\cmake_uninstall.cmake.in;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule F:/t/sync_file/文件/soft_renderer/SDL2-2.0.9/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HF:/t/sync_file/文件/soft_renderer/SDL2-2.0.9 -BF:/t/sync_file/文件/soft_renderer/SDL2-2.0.9/build --check-stamp-file F:/t/sync_file/文件/soft_renderer/SDL2-2.0.9/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">F:/t/sync_file/文件/soft_renderer/SDL2-2.0.9/CMakeLists.txt;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\CMakeLists.txt;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\build\CMakeFiles\3.11.3\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeSystemSpecificInitialize.cmake;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\build\CMakeFiles\3.11.3\CMakeCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\Platform\Windows-MSVC.cmake;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\build\CMakeFiles\3.11.3\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckIncludeFiles.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckCSourceRuns.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckStructHasMember.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\FindPkgConfig.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\GNUInstallDirs.cmake;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\cmake\macros.cmake;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\cmake\sdlchecks.cmake;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\include\SDL_config.h.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\BasicConfigVersion-AnyNewerVersion.cmake.in;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\cmake_uninstall.cmake.in;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule F:/t/sync_file/文件/soft_renderer/SDL2-2.0.9/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HF:/t/sync_file/文件/soft_renderer/SDL2-2.0.9 -BF:/t/sync_file/文件/soft_renderer/SDL2-2.0.9/build --check-stamp-file F:/t/sync_file/文件/soft_renderer/SDL2-2.0.9/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">F:/t/sync_file/文件/soft_renderer/SDL2-2.0.9/CMakeLists.txt;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\CMakeLists.txt;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\build\CMakeFiles\3.11.3\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeSystemSpecificInitialize.cmake;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\build\CMakeFiles\3.11.3\CMakeCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\Platform\Windows-MSVC.cmake;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\build\CMakeFiles\3.11.3\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckIncludeFiles.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckCSourceRuns.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckStructHasMember.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\FindPkgConfig.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\GNUInstallDirs.cmake;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\cmake\macros.cmake;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\cmake\sdlchecks.cmake;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\include\SDL_config.h.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\BasicConfigVersion-AnyNewerVersion.cmake.in;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\cmake_uninstall.cmake.in;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule F:/t/sync_file/文件/soft_renderer/SDL2-2.0.9/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HF:/t/sync_file/文件/soft_renderer/SDL2-2.0.9 -BF:/t/sync_file/文件/soft_renderer/SDL2-2.0.9/build --check-stamp-file F:/t/sync_file/文件/soft_renderer/SDL2-2.0.9/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">F:/t/sync_file/文件/soft_renderer/SDL2-2.0.9/CMakeLists.txt;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\CMakeLists.txt;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\build\CMakeFiles\3.11.3\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeSystemSpecificInitialize.cmake;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\build\CMakeFiles\3.11.3\CMakeCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\Platform\Windows-MSVC.cmake;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\build\CMakeFiles\3.11.3\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckIncludeFiles.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckCSourceRuns.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckStructHasMember.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\FindPkgConfig.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\GNUInstallDirs.cmake;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\cmake\macros.cmake;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\cmake\sdlchecks.cmake;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\include\SDL_config.h.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\BasicConfigVersion-AnyNewerVersion.cmake.in;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\cmake_uninstall.cmake.in;F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\SDL.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\SDL_assert.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\SDL_dataqueue.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\SDL_error.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\SDL_hints.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\SDL_log.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\atomic\SDL_atomic.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\atomic\SDL_spinlock.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\audio\SDL_audio.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\audio\SDL_audiocvt.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\audio\SDL_audiodev.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\audio\SDL_audiotypecvt.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\audio\SDL_mixer.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\audio\SDL_wave.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\cpuinfo\SDL_cpuinfo.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\dynapi\SDL_dynapi.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\events\SDL_clipboardevents.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\events\SDL_displayevents.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\events\SDL_dropevents.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\events\SDL_events.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\events\SDL_gesture.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\events\SDL_keyboard.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\events\SDL_mouse.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\events\SDL_quit.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\events\SDL_touch.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\events\SDL_windowevents.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\file\SDL_rwops.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\libm\e_atan2.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\libm\e_exp.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\libm\e_fmod.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\libm\e_log.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\libm\e_log10.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\libm\e_pow.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\libm\e_rem_pio2.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\libm\e_sqrt.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\libm\k_cos.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\libm\k_rem_pio2.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\libm\k_sin.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\libm\k_tan.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\libm\s_atan.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\libm\s_copysign.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\libm\s_cos.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\libm\s_fabs.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\libm\s_floor.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\libm\s_scalbn.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\libm\s_sin.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\libm\s_tan.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\render\SDL_d3dmath.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\render\SDL_render.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\render\SDL_yuv_sw.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\render\direct3d\SDL_render_d3d.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\render\direct3d\SDL_shaders_d3d.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\render\direct3d11\SDL_render_d3d11.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\render\direct3d11\SDL_shaders_d3d11.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\render\opengl\SDL_render_gl.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\render\opengl\SDL_shaders_gl.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\render\opengles\SDL_render_gles.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\render\opengles2\SDL_render_gles2.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\render\opengles2\SDL_shaders_gles2.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\render\psp\SDL_render_psp.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\render\software\SDL_blendfillrect.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\render\software\SDL_blendline.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\render\software\SDL_blendpoint.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\render\software\SDL_drawline.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\render\software\SDL_drawpoint.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\render\software\SDL_render_sw.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\render\software\SDL_rotate.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\stdlib\SDL_getenv.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\stdlib\SDL_iconv.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\stdlib\SDL_malloc.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\stdlib\SDL_qsort.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\stdlib\SDL_stdlib.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\stdlib\SDL_string.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\thread\SDL_thread.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\timer\SDL_timer.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\SDL_RLEaccel.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\SDL_blit.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\SDL_blit_0.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\SDL_blit_1.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\SDL_blit_A.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\SDL_blit_N.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\SDL_blit_auto.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\SDL_blit_copy.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\SDL_blit_slow.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\SDL_bmp.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\SDL_clipboard.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\SDL_egl.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\SDL_fillrect.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\SDL_pixels.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\SDL_rect.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\SDL_shape.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\SDL_stretch.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\SDL_surface.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\SDL_video.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\SDL_vulkan_utils.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\SDL_yuv.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\yuv2rgb\yuv_rgb.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\joystick\SDL_gamecontroller.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\joystick\SDL_joystick.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\haptic\SDL_haptic.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\sensor\SDL_sensor.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\power\SDL_power.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\audio\dummy\SDL_dummyaudio.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\audio\disk\SDL_diskaudio.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\dummy\SDL_nullevents.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\dummy\SDL_nullframebuffer.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\dummy\SDL_nullvideo.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\core\windows\SDL_windows.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\core\windows\SDL_xinput.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\audio\winmm\SDL_winmm.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\audio\directsound\SDL_directsound.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\audio\wasapi\SDL_wasapi.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\audio\wasapi\SDL_wasapi_win32.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\windows\SDL_windowsclipboard.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\windows\SDL_windowsevents.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\windows\SDL_windowsframebuffer.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\windows\SDL_windowskeyboard.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\windows\SDL_windowsmessagebox.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\windows\SDL_windowsmodes.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\windows\SDL_windowsmouse.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\windows\SDL_windowsopengl.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\windows\SDL_windowsopengles.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\windows\SDL_windowsshape.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\windows\SDL_windowsvideo.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\windows\SDL_windowsvulkan.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\video\windows\SDL_windowswindow.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\thread\windows\SDL_sysmutex.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\thread\windows\SDL_syssem.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\thread\windows\SDL_systhread.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\thread\windows\SDL_systls.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\thread\generic\SDL_syscond.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\power\windows\SDL_syspower.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\filesystem\windows\SDL_sysfilesystem.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\timer\windows\SDL_systimer.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\loadso\windows\SDL_sysloadso.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\joystick\windows\SDL_dinputjoystick.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\joystick\windows\SDL_mmjoystick.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\joystick\windows\SDL_windowsjoystick.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\joystick\windows\SDL_xinputjoystick.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\haptic\windows\SDL_dinputhaptic.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\haptic\windows\SDL_windowshaptic.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\haptic\windows\SDL_xinputhaptic.c" />
+    <ClCompile Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\src\sensor\dummy\SDL_dummysensor.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="F:\t\sync_file\文件\soft_renderer\SDL2-2.0.9\build\ZERO_CHECK.vcxproj">
+      <Project>{8DC24885-5573-39D9-9053-B1D91FA8AE6C}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,45 @@
+# CMake generation dependency list for this directory.
+F:/t/sync_file/文件/soft_renderer/SDL2-2.0.9/CMakeLists.txt
+F:/t/sync_file/文件/soft_renderer/SDL2-2.0.9/build/CMakeFiles/3.11.3/CMakeSystem.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/CMakeSystemSpecificInitialize.cmake
+F:/t/sync_file/文件/soft_renderer/SDL2-2.0.9/build/CMakeFiles/3.11.3/CMakeCCompiler.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/CMakeSystemSpecificInformation.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/CMakeGenericSystem.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/CMakeInitializeConfigs.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/Platform/Windows.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/Platform/WindowsPaths.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/CMakeCInformation.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/CMakeLanguageInformation.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/Platform/Windows-MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/Platform/Windows-MSVC.cmake
+F:/t/sync_file/文件/soft_renderer/SDL2-2.0.9/build/CMakeFiles/3.11.3/CMakeRCCompiler.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/CMakeRCInformation.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/CMakeCommonLanguageInclude.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/CheckFunctionExists.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/CheckLibraryExists.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/CheckIncludeFiles.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/CheckIncludeFile.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/CheckSymbolExists.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/CheckCSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/CheckCSourceRuns.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/CheckCCompilerFlag.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/CheckCSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/CheckTypeSize.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/CheckIncludeFile.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/CheckIncludeFileCXX.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/CheckStructHasMember.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/CheckCSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/CheckCXXSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/CMakeDependentOption.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/FindPkgConfig.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/GNUInstallDirs.cmake
+F:/t/sync_file/文件/soft_renderer/SDL2-2.0.9/cmake/macros.cmake
+F:/t/sync_file/文件/soft_renderer/SDL2-2.0.9/cmake/sdlchecks.cmake
+F:/t/sync_file/文件/soft_renderer/SDL2-2.0.9/include/SDL_config.h.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/CMakePackageConfigHelpers.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/WriteBasicConfigVersionFile.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in
+F:/t/sync_file/文件/soft_renderer/SDL2-2.0.9/cmake_uninstall.cmake.in
