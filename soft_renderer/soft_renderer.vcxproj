@@ -22,7 +22,7 @@
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{5BCC77EF-5B64-4F1E-A3F7-DB9CF7CFAF4B}</ProjectGuid>
     <RootNamespace>softrenderer</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -79,8 +79,8 @@
     <LibraryPath>F:\t\sync_file\文件\soft_renderer\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>F:\t\sync_file\文件\soft_renderer\include;$(IncludePath)</IncludePath>
-    <LibraryPath>F:\t\sync_file\文件\soft_renderer\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)include\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)lib\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -150,6 +150,9 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="t.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Release\assimp-vc141-mtd.dll" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

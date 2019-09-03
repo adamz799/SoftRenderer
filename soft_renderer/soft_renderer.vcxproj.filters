@@ -54,4 +54,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Release\assimp-vc141-mtd.dll">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
 </Project>
