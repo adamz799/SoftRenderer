@@ -17,19 +17,19 @@ class Mesh {
 public:
 	VertexData vertexData;
 	std::vector<int> indices;
-	std::vector<Texture> textures;
+	std::vector<Texture*> textures;
 	// 1. diffuse maps
-	std::vector<Texture> diffuseMaps;
+	std::vector<Texture*> diffuseMaps;
 	// 2. specular maps
-	std::vector<Texture> specularMaps; 
+	std::vector<Texture*> specularMaps; 
 	// 3. normal maps
-	std::vector<Texture> normalMaps;
+	std::vector<Texture*> normalMaps;
 	// 4. height maps
-	std::vector<Texture> heightMaps;
+	std::vector<Texture*> heightMaps;
 
 	Mesh() = default;
 
-	Mesh(VertexData &v, std::vector<int> &i, std::vector<Texture> &t) {
+	Mesh(VertexData &v, std::vector<int> &i, std::vector<Texture*> &t) {
 		vertexData = v;
 		indices = i;
 		textures = t;
@@ -91,9 +91,8 @@ private:
 
 		//indices
 		for (unsigned int i = 0; i < mesh->mNumFaces; ++i) {
-			aiFace face = mesh->mFaces[i];
-			for (unsigned int j = 0; j < face.mNumIndices; ++j) {
-				temp.indices.push_back(face.mIndices[j]);
+			for (unsigned int j = 0; j < mesh->mFaces[i].mNumIndices; ++j) {
+				temp.indices.push_back(mesh->mFaces[i].mIndices[j]);
 			}
 		}
 
@@ -101,14 +100,12 @@ private:
 		//vertex, normal, texCoords
 		temp.vertexData.positions = std::vector<vec4>(mesh->mNumVertices);
 		for (unsigned int i = 0; i < mesh->mNumVertices; ++i) {
-			__m128 data = { mesh->mVertices[i].x, mesh->mVertices[i].y, mesh->mVertices[i].z, 1.f };
-			_mm_storeu_ps(temp.vertexData.positions[i].e, data);
+			_mm_storeu_ps(temp.vertexData.positions[i].e, { mesh->mVertices[i].x, mesh->mVertices[i].y, mesh->mVertices[i].z, 1.f });
 		}
 
 		temp.vertexData.normals = std::vector<vec4>(mesh->mNumVertices);
 		for (unsigned int i = 0; i < mesh->mNumVertices; ++i) {
-			__m128 data = { mesh->mNormals[i].x, mesh->mNormals[i].y, mesh->mNormals[i].z, 1.f };
-			_mm_storeu_ps(temp.vertexData.normals[i].e, data);
+			_mm_storeu_ps(temp.vertexData.normals[i].e, { mesh->mNormals[i].x, mesh->mNormals[i].y, mesh->mNormals[i].z, 1.f });
 		}
 
 		temp.vertexData.texCoords = std::vector<vec2>(mesh->mNumVertices);
@@ -198,9 +195,9 @@ private:
 		return std::move(temp);
 	}
 
-	std::vector<Texture> loadMaterialTextures(aiMaterial *mat, aiTextureType type, std::string typeName) {
-		std::vector<Texture> textures;
-		unsigned int texCount = mat->GetTextureCount(type);
+	std::vector<Texture*> loadMaterialTextures(aiMaterial *mat, aiTextureType type, std::string typeName) {
+		std::vector<Texture*> textures;
+		const unsigned int texCount = mat->GetTextureCount(type);
 		for (unsigned int i = 0; i < texCount; ++i) {
 			aiString str;
 			mat->GetTexture(type, i, &str);
@@ -209,7 +206,7 @@ private:
 			if (loadedTexture.find(fileName) == loadedTexture.end()) {
 				loadedTexture[fileName] = Texture(fileName.c_str()); 
 			}
-			textures.push_back(loadedTexture[fileName]);
+			textures.push_back(&loadedTexture[fileName]);
 		}
 		return std::move(textures);
 	}

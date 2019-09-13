@@ -267,12 +267,12 @@ public:
 	vec4(float a, float b, float c, float d = 0.0f) {
 		_mm_storeu_ps(e, { a,b,c,d });
 	}
+	
 #else
 	vec4(float a) { e[0] = a; e[1] = a; e[2] = a; e[3] = a; }
 	vec4(float a, float b, float c, float d = 0.0f) { e[0] = a; e[1] = b; e[2] = c; e[3] = d; }
 
 #endif // SIMD
-
 
 	vec4(const vec3 &a, float b = 0.0f) { e[0] = a[0]; e[1] = a[1]; e[2] = a[2]; e[3] = b; }
 
@@ -985,8 +985,8 @@ void applyTrans(Matrix4x4 & model_matrix, std::vector<vec4> &pointArray) {
 	for (int j = 0; j < 4; ++j) {
 		data[j] = _mm_loadu_ps(model_matrix.e[j]);
 	}
-
-	for (int i = 0; i < pointArray.size(); ++i) {
+	const unsigned int data_size = pointArray.size();
+	for (int i = 0; i < data_size; ++i) {
 		__m128 vec = _mm_loadu_ps(pointArray[i].e);
 		for (int j = 0; j < 4; ++j) {
 			__m128 sums = _mm_dp_ps(data[j], vec, 0xff);
@@ -996,7 +996,8 @@ void applyTrans(Matrix4x4 & model_matrix, std::vector<vec4> &pointArray) {
 }
 #else
 void applyTrans(Matrix4x4 & model_matrix, std::vector<vec4> &pointArray) {
-	for (int i = 0; i < pointArray.size(); ++i) {
+	const unsigned int data_size = pointArray.size();
+	for (int i = 0; i < data_size; ++i) {
 		pointArray[i] = model_matrix.mul_vec(pointArray[i]);
 	}
 }

@@ -46,9 +46,12 @@ public:
 	}
 
 	void setTBN(const std::vector<int> &indices) {
-		tangents = std::vector<vec4>(positions.size());
-		bitTangents = std::vector<vec4>(positions.size());
-		for (int i = 2; i < indices.size(); i+=3) {
+		const int size = positions.size();
+		tangents = std::vector<vec4>(size);
+		bitTangents = std::vector<vec4>(size);
+
+		const int idx_size = indices.size();
+		for (int i = 2; i < idx_size; i+=3) {
 			vec4 v0 = positions[indices[i - 2]],
 				v1 = positions[indices[i - 1]],
 				v2 = positions[indices[i]];

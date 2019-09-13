@@ -15,8 +15,8 @@
 #include "vertex.h"
 #include "model.h"
 
-int width = 800;
-int height = 600;
+constexpr int width = 800;
+constexpr int height = 600;
 Camera camera;
 float z_near = 0.1f, z_far = 100.f;
 bool quit = false;
@@ -201,9 +201,9 @@ int WINAPI WinMain(HINSTANCE hinstance, HINSTANCE hprevinstance, LPSTR lpcmdline
 	Texture texture("bricks2.jpg")
 		, texture_normal("bricks2_normal.jpg")
 		, texture_disp("bricks2_disp.jpg");
-	shader.textureList.push_back(texture);
-	shader.textureList.push_back(texture_normal);
-	shader.textureList.push_back(texture_disp);
+	shader.textureList.push_back(&texture);
+	shader.textureList.push_back(&texture_normal);
+	shader.textureList.push_back(&texture_disp);
 
 
 	//PointLight defualtLight(vec3(1.8f, 0.f, 0.5f), 0.7*vec3(0.8f, 0.65f, 0.4f));
@@ -222,7 +222,8 @@ int WINAPI WinMain(HINSTANCE hinstance, HINSTANCE hprevinstance, LPSTR lpcmdline
 	shader.use(data, indices);//draw to buffer
 
 	Color c = { 255.f,255.f,255.f };
-	for (int i = 2; i < shader.indices.size(); i += 3) {
+	const int size = shader.indices.size();
+	for (int i = 2; i < size; i += 3) {
 		if (shader.indices[i - 2] < 0) { continue; }
 		coord v0 = shader.screenPos[shader.indices[i - 2]];
 		coord v1 = shader.screenPos[shader.indices[i - 1]];
@@ -262,7 +263,9 @@ int WINAPI WinMain(HINSTANCE hinstance, HINSTANCE hprevinstance, LPSTR lpcmdline
 	shader.setModelMatrix(model);
 	shader.use(data, indices);//draw to buffer
 	c = { 255.f,255.f,255.f };
-	for (int i = 2; i < shader.indices.size(); i += 3) {
+
+	const int size_t = shader.indices.size();
+	for (int i = 2; i < size_t; i += 3) {
 		if (shader.indices[i - 2] < 0) { continue; }
 		coord v0 = shader.screenPos[shader.indices[i - 2]];
 		coord v1 = shader.screenPos[shader.indices[i - 1]];

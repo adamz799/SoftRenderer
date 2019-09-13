@@ -193,11 +193,11 @@ public:
 
 	Buffer * buffer;
 	DepthBuffer *depthBuffer;
-	std::vector<Texture> textureList;
-	std::vector<Texture> diffuseMaps;
-	std::vector<Texture> specularMaps;
-	std::vector<Texture> normalMaps;
-	std::vector<Texture> heightMaps;
+	std::vector<Texture*> textureList;
+	std::vector<Texture*> diffuseMaps;
+	std::vector<Texture*> specularMaps;
+	std::vector<Texture*> normalMaps;
+	std::vector<Texture*> heightMaps;
 
 	std::vector<Frag> fragments;
 	std::vector<PointLight> lightList;
@@ -257,7 +257,8 @@ public:
 		vertexData.tangentViewPos = std::vector<vec4>(vertexData.positions.size());
 		
 		if (test_mode == TEST_LIGHT) {
-			for (int i = 0; i < vertexData.positions.size(); ++i) {
+			const unsigned int data_size = vertexData.positions.size();
+			for (int i = 0; i < data_size; ++i) {
 				vec4 normal_t = vertexData.normals[i];
 				normal_t[3] = 0;
 				Matrix4x4 TBN(vertexData.tangents[i], vertexData.bitTangents[i], normal_t.unit(), vec4(0, 0, 0, 1));
@@ -273,7 +274,7 @@ public:
 
 	void backFaceClip() {
 		if (prim_mode == SR_TRIANGLE) {
-			int size = indices.size();
+			const unsigned int size = indices.size();
 			for (int i = 2; i < size; i += 3) {
 				vec3 normal = vertexData.normals[indices[i]].toVec3();
 				if (dot(normal, camera.N) > 0.f) {
@@ -310,8 +311,8 @@ public:
 	}
 
 	void perspectiveMap(VertexData &data) {
-		int size = data.positions.size();
-		for (int i = 0; i < size; i++) {
+		const unsigned int data_size = data.positions.size();
+		for (int i = 0; i < data_size; i++) {
 			float w_inv = 1.f / data.positions[i][3];
 			
 			for (int j = 0; j < 2; ++j) {
@@ -341,7 +342,7 @@ public:
 			//clip 的过程中indices的size会改变（只增加）
 			//考虑到新生成的三角形也是符合条件的，就不再进行裁剪判断，size就按照原来的来
 			for (int mode = X_MINUS1; mode < Z_0; ++mode) {
-				int size = indices.size();
+				const int size = indices.size();
 				for (int i = 2; i < size; i += 3) {
 					int v0 = indices[i - 2], v1 = indices[i - 1], v2 = indices[i];
 					if (v2 == -1) { continue; }
@@ -357,7 +358,8 @@ public:
 		screenPos = std::vector<coord>(data.positions.size());
 		int width = buffer->width - 1;
 		int height = buffer->height - 1;
-		for (int i = 0; i < data.positions.size(); i++) {
+		const int size = data.positions.size();
+		for (int i = 0; i < size; i++) {
 			float x = (data.positions[i][0] + 1.f) / 2.f;
 			float y = (data.positions[i][1] + 1.f) / 2.f;
 			screenPos[i].x = int(x * width);
@@ -370,7 +372,8 @@ public:
 	void rasterizer(VertexData &data, std::vector<int> &indices) {
 		fragments.clear();
 		if (prim_mode == SR_TRIANGLE) {
-			for (int i = 2; i < indices.size(); i += 3) {
+			const int size = indices.size();
+			for (int i = 2; i < size; i += 3) {
 				if (indices[i] == -1) { continue; }
 				Frag v2(data, screenPos, indices[i], test_mode);
 				Frag v1(data, screenPos, indices[i - 1], test_mode);
@@ -439,11 +442,12 @@ public:
 	void fragmentProgram() {
 		//fragments[i].color 里就是顶点插值得来的颜色
 		if (test_mode == TEST_LIGHT) {
-			for (int i = 0; i < fragments.size(); ++i) {
+			const int size = fragments.size();
+			for (int i = 0; i < size; ++i) {
 				/*vec3 fragPos = fragments[i].fragPosInWorld.toVec3();
 				vec3 normal = fragments[i].normal.toVec3().unit();
-				vec3 viewPos = vec3(-view.e[0][3], -view.e[1][3], -view.e[2][3]);*/
-				vec2 texCoords = fragments[i].texCoords;
+				vec3 viewPos = vec3(-view.e[0][3], -view.e[1][3], -view.e[2][3]);
+				vec2 texCoords = fragments[i].texCoords;*/
 				
 				//fragments[i].color = textureList[0].sample(u, v, 0);
 				
@@ -459,26 +463,26 @@ public:
 				vec2 p(viewDir.x(), viewDir.y());
 				p *= 0.1f;
 				vec2 deltaTexCoords = p / numLayers;
-				vec2 curTexCoords(texCoords);
-				float curDepth = textureList[2].sample(curTexCoords.x(), curTexCoords.y(), 0).r();
+				vec2 curTexCoords(fragments[i].texCoords);
+				float curDepth = textureList[2]->sample(curTexCoords[0], curTexCoords[1], 0).r();
 
 				while (curLayerDepth < curDepth) {
 					curTexCoords -= deltaTexCoords;
-					curDepth = textureList[2].sample(curTexCoords.x(), curTexCoords.y(), 0).r();
+					curDepth = textureList[2]->sample(curTexCoords[0], curTexCoords[1], 0).r();
 					curLayerDepth += layerDepth;
 				}
 
 				float afterDepth = curDepth - layerDepth;
 
 				vec2 prevTexCoords = curTexCoords + deltaTexCoords;
-				float beforeDepth = textureList[2].sample(prevTexCoords.x(), prevTexCoords.y(), 0).r();
+				float beforeDepth = textureList[2]->sample(prevTexCoords[0], prevTexCoords[1], 0).r();
 				float weight = afterDepth / (afterDepth - beforeDepth);
 				curTexCoords = prevTexCoords * weight + curTexCoords * (1.f - weight);
 
 				
-				vec3 normal = textureList[1].sample(curTexCoords.x(), curTexCoords.y(), 0).toVec3();
+				vec3 normal = textureList[1]->sample(curTexCoords[0], curTexCoords[1], 0).toVec3();
 				normal = (normal*2.f - 1.f).unit();
-				vec3 color = textureList[0].sample(curTexCoords.x(), curTexCoords.y(), 0).toVec3();
+				vec3 color = textureList[0]->sample(curTexCoords[0], curTexCoords[1], 0).toVec3();
 
 				vec3 lightDir = (lightPos - fragPos).unit();
 				float ambient = 0.05f;
@@ -500,10 +504,11 @@ public:
 			}
 		}
 		else if (test_mode == TEST_TEXTURE) {
-			for (int i = 0; i < fragments.size(); ++i) {
+			const int size = fragments.size();
+			for (int i = 0; i < size; ++i) {
 				float u = fragments[i].texCoords.x();
 				float v = fragments[i].texCoords.y();
-				fragments[i].color = diffuseMaps[0].sample(u, v, 0)*1.2f;
+				fragments[i].color = diffuseMaps[0]->sample(u, v, 0)*1.2f;
 				//fragments[i].color = diffuseMaps[0].sample()
 
 			}
@@ -514,16 +519,14 @@ public:
 	}
 
 	void drawToBuffer() {
-		for (int i = 0; i < fragments.size(); ++i) {
+		const int size = fragments.size();
+		for (int i = 0; i < size; ++i) {
 			int x = fragments[i].screenPos.x;
 			int y = fragments[i].screenPos.y;
 			float depth = fragments[i].position.z();
 
 			int offset = depthBuffer->width*y + x;
-			if (depth > *(depthBuffer->ptr + offset)) {
-				continue;
-			}
-			else {
+			if (depth < *(depthBuffer->ptr + offset)) {
 				*(depthBuffer->ptr + offset) = depth;
 				for (int j = 0; j < 3; ++j) {
 					if (fragments[i].color[j] > 1.f) { fragments[i].color[j] = 1.f; }
@@ -540,6 +543,8 @@ private:
 	Frag interpolate(Frag &v0, Frag &v1, Frag &v2, float u, float v) {
 		Frag temp;
 		float w = 1.f - u - v;
+		temp.texCoords = u * v1.texCoords + v * v2.texCoords + w * v0.texCoords;
+
 		__m128 _u = _mm_load_ps1(&u);
 		__m128 _v = _mm_load_ps1(&v);
 		__m128 _w = _mm_load_ps1(&w);
@@ -565,7 +570,7 @@ private:
 			_temp = _mm_mul_ps(_w, _mm_loadu_ps(v0.color.e));
 			_mm_storeu_ps(temp.color.e, _mm_add_ps(result, _temp));
 		}
-		temp.texCoords = u * v1.texCoords + v * v2.texCoords + w * v0.texCoords;
+		
 		if (test_mode == TEST_LIGHT) {
 
 			result = _mm_mul_ps(_u, _mm_loadu_ps(v1.fragPosInWorld.e));
