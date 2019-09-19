@@ -60,7 +60,7 @@ public:
 private:
 	std::vector<Mesh> meshes;
 	std::string directory;
-	std::vector<Texture> textures_loaded;
+	//std::vector<Texture> textures_loaded;
 	std::map<std::string, Texture> loadedTexture;
 
 	void loadModel(const std::string &path) {
@@ -72,6 +72,7 @@ private:
 		}
 		directory = path.substr(0, path.find_last_of('/'));
 		processNode(scene->mRootNode, scene);
+		//importer.FreeScene();
 	}
 
 	void processNode(aiNode *node, const aiScene *scene) {
@@ -179,10 +180,10 @@ private:
 		
 
 		
-		std::vector<Texture> textures;
+		//std::vector<Texture> textures;
 		// process materials
 		aiMaterial* material = scene->mMaterials[mesh->mMaterialIndex];
-
+		
 		// 1. diffuse maps
 		temp.diffuseMaps = loadMaterialTextures(material, aiTextureType_DIFFUSE, "texture_diffuse");
 		// 2. specular maps

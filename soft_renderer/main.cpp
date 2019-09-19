@@ -252,7 +252,7 @@ int WINAPI WinMain(HINSTANCE hinstance, HINSTANCE hprevinstance, LPSTR lpcmdline
 	shader.setModelMatrix(model);
 	shader.test_mode = TEST_TEXTURE;
 
-	Model nanosuit("nanosuit/nanosuit.obj");
+	Model nanosuit("D:/nanosuit/nanosuit.obj");
 	nanosuit.draw(shader);
 
 	shader.test_mode = TEST_COLOR;

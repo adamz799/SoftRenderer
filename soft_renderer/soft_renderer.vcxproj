@@ -149,7 +149,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="t.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Release\assimp-vc141-mtd.dll" />
